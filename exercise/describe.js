@@ -9,17 +9,26 @@ const expect = (result) => ({
 });
 
 function test(title, callback) {
+  const prefix = test.parentTitle ? `    ` : '';
   try {
     callback();
-    console.log(`✓ ${title}`);
+    console.log(`${prefix}✓ ${title}`);
   } catch (error) {
-    console.log(`x ${title}`);
+    console.log(`${prefix}x ${title}`);
     console.error(error);
   }
 }
 
-function describe() {
-  // TODO: Make it works 😛 good luck
+function describe(title, callback) {
+  console.log(`> ${title}`);
+
+  test.parentTitle = title;
+  try {
+    callback();
+  } catch (error) {
+    console.error(error);
+  }
+  delete test.parentTitle;
 }
 
 let result, expected;
