@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import * as api from './api'
 
 export const LoginForm = () => {
   const [username, setUsername] = useState('')
@@ -11,14 +12,8 @@ export const LoginForm = () => {
   const handleFormSubmit = useCallback(
     (event) => {
       event.preventDefault()
-      fetch('/login', {
-        method: 'POST',
-        body: JSON.stringify({
-          username,
-        }),
-      })
-        .then((res) => res.json())
-        .then(setUserData)
+
+      api.login(username).then(setUserData)
     },
     [username]
   )
@@ -27,7 +22,7 @@ export const LoginForm = () => {
     return (
       <div>
         <h1>
-          <span>{userData.firstName}</span>{' '}
+          <span>{userData.name}</span>{' '}
           <span>{userData.lastName}</span>
         </h1>
         <p>{userData.id}</p>
