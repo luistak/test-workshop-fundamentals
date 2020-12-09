@@ -1,5 +1,3 @@
-// Run `yarn fundamentals:04` to execute this test
-
 const { sum, subtract } = require('../math');
 
 const expect = (result) => ({
@@ -20,18 +18,8 @@ function test(title, callback) {
   }
 }
 
-/**
-  In this exercise you will need to implement the `describe` function
-  and make this tests pass with the expected output: 
-
-  ✓ should sum numbers
-  > When something
-      ✓ should works
-  ✓ should subtract numbers
-*/
-
 function describe() {
-  // Make it works 😛 good luck
+  // TODO: Make it works 😛 good luck
 }
 
 let result, expected;
