@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "jest": "npx jest",
-    "jest:watch": "yarn jest --watch",
+    "jest": "npx jest --watch",
     "test": "react-scripts test",
     "start": "react-scripts start",
-    "fundamentals": "node src/fundamentals/test.js",
-    "test:mock": "yarn jest:watch mock",
+    "test:fundamentals": "node src/fundamentals/test.js",
+    "test:mock": "yarn jest mock",
     "test:msw": "yarn test msw"
   },
   "dependencies": {
