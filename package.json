@@ -1,0 +1,48 @@
+{
+  "name": "test-workshop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "jest": "npx jest",
+    "jest:watch": "yarn jest --watch",
+    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "fundamentals:01": "node src/fundamentals/tests/1-simple.js",
+    "fundamentals:02": "node src/fundamentals/tests/2-assertion.js",
+    "fundamentals:03": "node src/fundamentals/tests/3-utilities.js",
+    "fundamentals:04": "node src/fundamentals/tests/4-describe.js",
+    "fundamentals:05": "node src/fundamentals/tests/5-async.js",
+    "fundamentals:06": "yarn jest src/fundamentals/tests/6-jest.test.js",
+    "test:mock": "yarn jest:watch mock",
+    "test:msw": "yarn test msw"
+  },
+  "dependencies": {
+    "msw": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
