@@ -11,27 +11,26 @@ const expect = (result) => ({
 });
 
 function test(title, callback) {
+  const prefix = test.parentTitle ? `    ` : '';
   try {
     callback();
-    console.log(`✓ ${title}`);
+    console.log(`${prefix}✓ ${title}`);
   } catch (error) {
-    console.log(`x ${title}`);
+    console.log(`${prefix}x ${title}`);
     console.error(error);
   }
 }
 
-/**
-  In this exercise you will need to implement the `describe` function
-  and make this tests pass with the expected output: 
+function describe(title, callback) {
+  console.log(`> ${title}`);
 
-  ✓ should sum numbers
-  > When something
-      ✓ should works
-  ✓ should subtract numbers
-*/
-
-function describe() {
-  // Make it works 😛 good luck
+  test.parentTitle = title;
+  try {
+    callback();
+  } catch (error) {
+    console.error(error);
+  }
+  delete test.parentTitle;
 }
 
 let result, expected;
