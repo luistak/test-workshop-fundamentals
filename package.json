@@ -7,12 +7,7 @@
     "jest:watch": "yarn jest --watch",
     "test": "react-scripts test",
     "start": "react-scripts start",
-    "fundamentals:01": "node src/fundamentals/tests/1-simple.js",
-    "fundamentals:02": "node src/fundamentals/tests/2-assertion.js",
-    "fundamentals:03": "node src/fundamentals/tests/3-utilities.js",
-    "fundamentals:04": "node src/fundamentals/tests/4-describe.js",
-    "fundamentals:05": "node src/fundamentals/tests/5-async.js",
-    "fundamentals:06": "yarn jest src/fundamentals/tests/6-jest.test.js",
+    "fundamentals": "node src/fundamentals/test.js",
     "test:mock": "yarn jest:watch mock",
     "test:msw": "yarn test msw"
   },
