@@ -14,19 +14,25 @@ In this workshop we'll learn how testing frameworks like `jest` was built and ho
 
 ## ✏️ Exercises
 
-### Create your own describe function
+**Create your own describe function**
 
 1. Checkout to `exercise-01` branch
 2. Follow README.md instructions 🎉
 
-### Mock a login form
+**Mock a login form**
 
 1. Checkout to `exercise-02` branch
 2. Follow README.md instructions 🎉
 
-## Presentation material
+## 📖 Presentation material
 
 You can check every workshop material at the `solutions` branch
+
+## :speaking_head: Feedback form
+
+After the workshop please submit this [form](https://forms.gle/5tGbWqSqmcGeRJKi8) to give overall feedback.
+
+Thank you!
 
 ## ❤️ Inspirations
 
